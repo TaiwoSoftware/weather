@@ -4,10 +4,9 @@ const check = document.querySelector("#check");
 const result = document.querySelector('#result');
 const weatherApp = document.querySelector("#weatherApp");
 
-function onChange() {
-  console.log('changed');
-}
-check.addEventListener("click", () => {
+// If the degree of a country 26-32 is below 30 degrees then it is said to be cold if above 30 it is said to be hot
+check.addEventListener("click", (event) => {
+  event.preventDefault();
   const weatherResult = async function () {
     try {
       const res = await fetch(
@@ -16,7 +15,8 @@ check.addEventListener("click", () => {
       const data = await res.json();
       result.innerHTML = 'Your weather is ' + JSON.stringify(data.main.temp) + " celsius";
     } catch (error) {
-        alert('Check your internet connection' + error)
+        // alert('Check your internet connection' + error)
+        console.log('yoo', error);
     }
   };
 

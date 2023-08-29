@@ -5,14 +5,30 @@
 }
 
 body{
-    background-color: black;
     width: 100%;
     padding: 2rem;
     font-family: sans-serif;
 }
 
 h1{
-    color: white;
-    font-size: 6rem;
+    color: black;
+    font-size: 3rem;
     text-align: center;
+}
+
+.cloud-image{
+    margin-left: 0;
+    width: 10%;
+}
+
+form{
+    display: flex;
+}
+
+label{
+    color: black;
+}
+
+.weather-p{
+    color: black;
 }
